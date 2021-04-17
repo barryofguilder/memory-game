@@ -15,9 +15,7 @@ export default class TileComponent extends Component<TileComponentArgs> {
 
   @action
   buttonClicked() {
-    this.args.tile.isFaceUp = !this.args.tile.isFaceUp;
-
-    if (this.args.tile.isFaceUp && this.args.onTileSelected) {
+    if (this.args.onTileSelected) {
       this.args.onTileSelected(this.args.tile);
     }
   }
