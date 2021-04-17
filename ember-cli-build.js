@@ -10,7 +10,7 @@ module.exports = function (defaults) {
           require('postcss-import')({ path: ['node_modules'] }),
           require('tailwindcss')('./app/tailwind.config.js'),
         ],
-        cacheInclude: [/.*\.(css|js|hbs)$/, /.tailwind\.config\.js$/],
+        cacheInclude: [/.*\.(css|js|ts|hbs)$/, /.tailwind\.config\.js$/],
       },
     },
   });

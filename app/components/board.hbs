@@ -1,6 +1,19 @@
-<div class="flex flex-wrap justify-center">
+<div class="ml-2 flex space-x-8">
+  <div class="flex space-x-2">
+    <div>Elapsed Time:</div>
+    <div class="font-semibold">{{this.elapsedTime}}</div>
+  </div>
+
+  <div class="flex space-x-2">
+    <div>Flip Count:</div>
+    <div class="font-semibold">{{this.flipCount}}</div>
+  </div>
+</div>
+
+<div class="mt-4 flex flex-wrap justify-center">
   {{#each @tiles as |tile|}}
     <Tile
+      class="m-2"
       @tile={{tile}}
       @onTileSelected={{this.tileSelected}}
       @readOnly={{this.readOnly}}

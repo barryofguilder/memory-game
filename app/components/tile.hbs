@@ -1,7 +1,8 @@
 <button
   type="button"
-  class="m-2 focus:outline-none focus:ring-2 focus:ring-purple-600"
+  ...attributes
   disabled={{this.disabled}}
+  class="focus:outline-none focus:ring-2 focus:ring-purple-600"
   {{on "click" this.buttonClicked}}
 >
   <div class="bg-transparent w-36 h-36">

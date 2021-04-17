@@ -10,6 +10,14 @@ export interface BoardComponentArgs {
 export default class BoardComponent extends Component<BoardComponentArgs> {
   @tracked selectedTiles: Tile[] = [];
   @tracked readOnly = false;
+  @tracked elapsedTime = 0;
+  @tracked flipCount = 0;
+
+  constructor(owner: unknown, args: BoardComponentArgs) {
+    super(owner, args);
+
+    // TODO: Start timer
+  }
 
   turnOverTiles() {
     this.selectedTiles.forEach((tile) => (tile.isFaceUp = false));
@@ -23,6 +31,7 @@ export default class BoardComponent extends Component<BoardComponentArgs> {
       this.turnOverTiles();
     }
 
+    this.flipCount++;
     tile.isFaceUp = true;
     this.selectedTiles.push(tile);
 
