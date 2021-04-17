@@ -1,5 +1,5 @@
 <div class="flex flex-wrap justify-center">
-  {{#each this.cards as |card|}}
-    <Card @image={{card.image}} />
+  {{#each @tiles as |tile|}}
+    <Card @image={{tile.card.image}} />
   {{/each}}
 </div>
