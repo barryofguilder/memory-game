@@ -6,6 +6,8 @@ const CARDS = [
   new Card(1, '01.jpg', null),
   new Card(2, '02.jpg', null),
   new Card(3, '03.jpg', null),
+  new Card(4, '04.jpg', null),
+  new Card(5, '05.jpg', null),
 ];
 
 export default class IndexRoute extends Route {
