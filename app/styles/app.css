@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.backface-visibility-hidden {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
