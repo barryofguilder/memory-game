@@ -1,5 +1,9 @@
 <div class="flex flex-wrap justify-center">
   {{#each @tiles as |tile|}}
-    <Card @tile={{tile}} />
+    <Tile
+      @tile={{tile}}
+      @onTileSelected={{this.tileSelected}}
+      @readOnly={{this.readOnly}}
+    />
   {{/each}}
 </div>

@@ -1,6 +1,7 @@
 <button
   type="button"
   class="m-2 focus:outline-none focus:ring-2 focus:ring-purple-600"
+  disabled={{this.disabled}}
   {{on "click" this.buttonClicked}}
 >
   <div class="bg-transparent w-36 h-36">
@@ -9,7 +10,7 @@
         class="
           absolute w-full h-full backface-visibility-hidden
           bg-purple-300 transition-transform duration-200
-          {{if this.isFaceUp "flip"}}
+          {{if @tile.isFaceUp "flip"}}
         "
       >
         {{! Back}}
@@ -18,7 +19,7 @@
         class="
           absolute w-full h-full backface-visibility-hidden
           bg-purple-800 text-white transition-transform duration-200
-          {{if this.isFaceUp "" "flip"}}
+          {{if @tile.isFaceUp "" "flip"}}
         "
       >
         <img class="w-full" src="/images/{{@tile.card.image}}" />
