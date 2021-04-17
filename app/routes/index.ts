@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
-import { Card } from '../models/card';
+import { Tile } from 'memory-game/models/tile';
+import { Card } from 'memory-game/models/card';
 
 const CARDS = [
   new Card(1, '01.jpg', null),
@@ -12,9 +13,9 @@ export default class IndexRoute extends Route {
     return this._generateTiles();
   }
 
-  _generateTiles() {
+  _generateTiles(): Tile[] {
     const count = CARDS.length * 2;
-    const tiles = [];
+    const tiles: Tile[] = [];
 
     for (let i = 0; i < count; i++) {
       let added = false;
@@ -24,8 +25,12 @@ export default class IndexRoute extends Route {
         const matches = tiles.filter((tile) => tile.card.id === number);
 
         if (matches.length < 2) {
-          tiles.push({ card: this._findCard(number) });
-          added = true;
+          const card = this._findCard(number);
+
+          if (card) {
+            tiles.push(new Tile(card));
+            added = true;
+          }
         }
       } while (added === false);
     }
@@ -33,11 +38,11 @@ export default class IndexRoute extends Route {
     return tiles;
   }
 
-  _findCard(id) {
+  _findCard(id: number): Card | undefined {
     return CARDS.find((card) => card.id === id);
   }
 
-  _randomNumber() {
+  _randomNumber(): number {
     return Math.floor(Math.random() * CARDS.length) + 1;
   }
 }
