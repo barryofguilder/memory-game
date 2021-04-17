@@ -3,11 +3,11 @@ import { Tile } from 'memory-game/models/tile';
 import { Card } from 'memory-game/models/card';
 
 const CARDS = [
-  new Card(1, '01.jpg', null),
-  new Card(2, '02.jpg', null),
-  new Card(3, '03.jpg', null),
-  new Card(4, '04.jpg', null),
-  new Card(5, '05.jpg', null),
+  new Card(1, '01.jpg', '01.m4a'),
+  new Card(2, '02.jpg', '02.m4a'),
+  new Card(3, '03.jpg', '03.m4a'),
+  new Card(4, '04.jpg', '04.m4a'),
+  new Card(5, '05.jpg', '05.m4a'),
 ];
 
 export default class IndexRoute extends Route {
