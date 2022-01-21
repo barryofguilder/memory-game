@@ -8,22 +8,22 @@
   <div class="bg-transparent w-36 h-36">
     <div class="relative w-full h-full">
       <div
-        class="
-          absolute w-full h-full backface-visibility-hidden
-          bg-purple-300 transition-transform duration-200
-          {{if @tile.isFaceUp "flip"}}
-        "
+        class="absolute w-full h-full backface-visibility-hidden bg-purple-300 transition-transform duration-200
+          {{if @tile.isFaceUp 'flip'}}
+          "
       >
         {{! Back}}
       </div>
       <div
-        class="
-          absolute w-full h-full backface-visibility-hidden
-          bg-purple-800 text-white transition-transform duration-200
-          {{if @tile.isFaceUp "" "flip"}}
-        "
+        class="absolute w-full h-full backface-visibility-hidden bg-purple-800 text-white transition-transform duration-200
+          {{if @tile.isFaceUp '' 'flip'}}
+          "
       >
-        <img class="w-full select-none" src="/images/{{@tile.card.image}}" draggable="false" />
+        <img
+          class="w-full select-none"
+          src="/images/{{@tile.card.image}}"
+          draggable="false"
+        />
       </div>
     </div>
   </div>
