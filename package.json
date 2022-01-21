@@ -95,5 +95,9 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
   }
 }
