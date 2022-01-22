@@ -1,0 +1,17 @@
+{
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[handlebars]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  }
+}
