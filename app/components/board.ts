@@ -36,6 +36,10 @@ export default class BoardComponent extends Component<BoardComponentArgs> {
       this.turnOverTiles();
     }
 
+    if (this.selectedTiles.includes(tile)) {
+      return;
+    }
+
     this.flipCount++;
     tile.isFaceUp = true;
     this.selectedTiles.push(tile);
