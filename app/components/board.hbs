@@ -1,19 +1,17 @@
-<div class="ml-2 flex space-x-8">
-  <div class="flex space-x-2">
-    <div>Elapsed Time:</div>
-    <div class="font-semibold">{{this.elapsedTime}}</div>
+<dl class="px-3 py-2 flex justify-between bg-gray-200 rounded-md shadow-inner">
+  <div>
+    <dt class="text-sm text-gray-600">Elapsed Time</dt>
+    <dd class="font-semibold text-2xl">{{this.elapsedTime}}</dd>
   </div>
-
-  <div class="flex space-x-2">
-    <div>Flip Count:</div>
-    <div class="font-semibold">{{this.flipCount}}</div>
+  <div class="text-right">
+    <dt class="text-sm text-gray-600">Flip Count</dt>
+    <dd class="font-semibold text-2xl">{{this.flipCount}}</dd>
   </div>
-</div>
+</dl>
 
-<div class="mt-4 flex flex-wrap justify-center">
+<div class="mt-4 max-w-2xl flex flex-wrap justify-center gap-2">
   {{#each @tiles as |tile|}}
     <Tile
-      class="m-2"
       @tile={{tile}}
       @onTileSelected={{this.tileSelected}}
       @readOnly={{this.readOnly}}
