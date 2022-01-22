@@ -1,5 +1,4 @@
 import Service from '@ember/service';
-// @ts-ignore
 import { Howl } from 'howler';
 
 export default class AudioService extends Service {
