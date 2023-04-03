@@ -1,11 +1,11 @@
 {
   "name": "memory-game",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Small description for memory-game goes here",
-  "repository": "",
+  "description": "A simple memory card game.",
+  "repository": "https://github.com/barryofguilder/memory-game.git",
   "license": "MIT",
-  "author": "",
+  "author": "Jason Barry <jbarry@hey.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
