@@ -11,10 +11,6 @@
 
 <div class="mt-4 max-w-2xl flex flex-wrap justify-center gap-2">
   {{#each @tiles as |tile|}}
-    <Tile
-      @tile={{tile}}
-      @onTileSelected={{this.tileSelected}}
-      @readOnly={{this.readOnly}}
-    />
+    <Tile @tile={{tile}} @onTileSelected={{this.tileSelected}} @readOnly={{this.readOnly}} />
   {{/each}}
 </div>
