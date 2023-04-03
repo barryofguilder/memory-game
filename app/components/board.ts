@@ -47,9 +47,13 @@ export default class BoardComponent extends Component<BoardComponentArgs> {
     if (this.selectedTiles.length === 2) {
       this.readOnly = true;
 
-      if (this.selectedTiles[0].card.id === this.selectedTiles[1].card.id) {
+      if (this.selectedTiles[0]?.card.id === this.selectedTiles[1]?.card.id) {
         this.selectedTiles.forEach((tile) => (tile.hasMatch = true));
-        this.audio.playSound(this.selectedTiles[0].card.sound);
+
+        if (this.selectedTiles[0]?.card) {
+          this.audio.playSound(this.selectedTiles[0].card.sound);
+        }
+
         this.selectedTiles = [];
       }
 
