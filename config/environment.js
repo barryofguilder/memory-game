@@ -41,7 +41,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = 'memory';
+    ENV.rootURL = '/memory-game/';
   }
 
   return ENV;
