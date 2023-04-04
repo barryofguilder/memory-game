@@ -10,8 +10,7 @@ export interface BoardComponentArgs {
 }
 
 export default class BoardComponent extends Component<BoardComponentArgs> {
-  // @ts-ignore
-  @service audio: AudioService;
+  @service declare audio: AudioService;
 
   @tracked selectedTiles: Tile[] = [];
   @tracked readOnly = false;
@@ -20,6 +19,8 @@ export default class BoardComponent extends Component<BoardComponentArgs> {
 
   constructor(owner: unknown, args: BoardComponentArgs) {
     super(owner, args);
+
+    this.audio.load();
 
     // TODO: Start timer
   }
@@ -44,16 +45,12 @@ export default class BoardComponent extends Component<BoardComponentArgs> {
     tile.isFaceUp = true;
     this.selectedTiles.push(tile);
 
-    if (this.selectedTiles.length === 2) {
+    if (this.selectedTiles[0] !== undefined && this.selectedTiles[1] !== undefined) {
       this.readOnly = true;
 
-      if (this.selectedTiles[0]?.card.id === this.selectedTiles[1]?.card.id) {
+      if (this.selectedTiles[0].card.id === this.selectedTiles[1].card.id) {
         this.selectedTiles.forEach((tile) => (tile.hasMatch = true));
-
-        if (this.selectedTiles[0]?.card) {
-          this.audio.playSound(this.selectedTiles[0].card.sound);
-        }
-
+        this.audio.playSound(this.selectedTiles[0].card.sound);
         this.selectedTiles = [];
       }
 
