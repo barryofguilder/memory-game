@@ -4,7 +4,9 @@ import { Howl } from 'howler';
 export default class AudioService extends Service {
   playSound(sound: string) {
     const howl = new Howl({
-      src: `/sounds/${sound}`,
+      src: `sounds/${sound}`,
+      // Required to work on iOS
+      html5: true,
     });
     howl.play();
   }
