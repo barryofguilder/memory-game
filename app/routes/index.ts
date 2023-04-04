@@ -43,10 +43,7 @@ export default class IndexRoute extends Route {
     }
 
     const shuffledCards = this._shuffleCards(cards);
-
-    const tiles = shuffledCards.map((card) => new Tile(card));
-    tiles.forEach((tile) => (tile.isFaceUp = true));
-    return tiles;
+    return shuffledCards.map((card) => new Tile(card));
   }
 
   _findCard(id: number): Card | undefined {
