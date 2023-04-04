@@ -3,18 +3,18 @@ import { Tile } from 'memory-game/models/tile';
 import { Card } from 'memory-game/models/card';
 
 const CARDS = [
-  new Card(1, '01.jpg', '01.m4a'),
-  new Card(2, '02.jpg', '02.m4a'),
-  new Card(3, '03.jpg', '03.m4a'),
-  new Card(4, '04.jpg', '04.m4a'),
-  new Card(5, '05.jpg', '05.m4a'),
-  new Card(6, '06.jpg', '05.m4a'),
-  new Card(7, '07.jpg', '07.m4a'),
-  new Card(8, '08.jpg', '05.m4a'),
-  new Card(9, '09.jpg', '05.m4a'),
-  new Card(10, '10.jpg', '10.m4a'),
-  new Card(11, '11.jpg', '11.m4a'),
-  new Card(12, '12.jpg', '12.m4a'),
+  new Card(1, '01.jpg', '01.mp3'),
+  new Card(2, '02.jpg', '02.mp3'),
+  new Card(3, '03.jpg', '03.mp3'),
+  new Card(4, '04.jpg', '04.mp3'),
+  new Card(5, '05.jpg', '05.mp3'),
+  new Card(6, '06.jpg', '05.mp3'),
+  new Card(7, '07.jpg', '07.mp3'),
+  new Card(8, '08.jpg', '05.mp3'),
+  new Card(9, '09.jpg', '05.mp3'),
+  new Card(10, '10.jpg', '10.mp3'),
+  new Card(11, '11.jpg', '11.mp3'),
+  new Card(12, '12.jpg', '12.mp3'),
 ];
 const MAX_CARDS = 8;
 
